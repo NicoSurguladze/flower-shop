@@ -14,7 +14,7 @@ const pinkRose = new Flower("3", "Roses", "Pink", "$4.00", "./images/pink-roses.
 const redPeonies = new Flower("4", "Peonies", "Red", "$6.00", "./images/red-peonies.jpg");
 const whitePeonies = new Flower("5", "Peonies", "White", "$5.50", "./images/white-peonies.jpg");
 const pinkPeonies = new Flower("6", "Peonies", "Pink", "$4.60", "./images/pink-peonies.jpg");
-const redTulip = new Flower("7", "Tulips", "Red", "$7.20", "/images/red-tulips.jpeg");
+const redTulip = new Flower("7", "Tulips", "Red", "$7.20", "./images/red-tulips.jpeg");
 const yellowTulip = new Flower("8", "Tulips", "Yellow", "$5.30", "./images/yellow-tulips.jpeg");
 const purpleTulip = new Flower("9", "Tulips", "Purple", "$8.50", "./images/purple-tulips.jpg");
 
