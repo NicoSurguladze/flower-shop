@@ -1,14 +1,20 @@
 import { removeAllChildNodes } from "./bagItem.js";
 import { hideCheckout } from "./hidePages.js";
 import { showHomepage } from "./showPages.js";
-import { clearBag } from "./bag.js";
+import { clearBag, shoppingBag } from "./bag.js";
 
 const postCheckoutDiv = document.createElement("div");
 const loadingIcon = document.createElement("img");
 
 //completes checkout and returns to homepage
 function checkout() {
-    loadingAnimation();
+    if (shoppingBag.length == 0) {
+        document.getElementById("checkout-content").setAttribute("id", "checkout-content-flash");
+        setTimeout(() => {
+            document.getElementById("checkout-content-flash").setAttribute("id", "checkout-content");
+        }, 1000);
+    } else {
+        loadingAnimation();
         success();
         setTimeout(() => {
         hideCheckout();
@@ -16,6 +22,7 @@ function checkout() {
         showHomepage();
         clearBag();
     }, 9200);
+    }
 }
 
 //creates loading animation

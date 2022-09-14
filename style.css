@@ -687,3 +687,28 @@ header {
     color: #ffffff;
     font-size: 40px;
   }
+
+  @-webkit-keyframes redflash {
+    from {
+        color: #ffffff;
+    }
+    to {
+        color: red;
+    }
+  }
+
+  #checkout-content-flash {
+    margin-top: 20px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    height: 61%;
+    overflow-y: auto;
+    -webkit-animation-name:            redflash; 
+    -webkit-animation-duration:        0.2s; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+
+  }
