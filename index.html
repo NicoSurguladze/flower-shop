@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./scrollbar.css">
+    <title>Flower Shop</title>
+</head>
+<body id="body">
+
+    <header>
+        <div id="logo" onclick="showHomepage()">
+            <img id="logo-img" src="./images/logo-1.png" alt="logo">
+            <h1 id="logo-title">Giardino</h1>
+        </div>
+        <nav id="navigation">
+            <div class="dropdown">
+                <button class="dropdownbtn" onclick="showFlowers()">Flowers<img id="dropdown-icon" src="./images/dropdown-icon.png"></button>
+                <div id="dropdown-content">
+                </div>
+            </div>
+                <button class="dropdownbtn" onclick="showAbout()">About us</button>
+                <button  class="dropdownbtn" onclick="showContact()">Contact</button>    
+        </nav>
+        <div id="shopping-bag">
+            <div onclick="showCheckout()">
+                <img id="shopping-bag-img" src="./images/icons8-paper-bag-64.png" alt="">
+                <div id="bag-notification">
+                    <p id="bag-quantity"></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="background-img">
+
+    </div>
+
+    <main id="main">
+
+        <div id="start-page">
+            <h2 id="start-page-title">Flowers For All Seasons</h2>
+            <button id="button" onclick="showFlowers()">Shop now</button>
+        </div>
+
+        <div id="about-page">
+            <h2 id="about-page-title">About us</h2>
+            <p>Our flowers are hand-picked, carefully and individually packed, then delivered worldwide.
+                <br><br>Our collection includes lovingly selected floral gifts along with hand-tied bouquets, vase-ready and arranged by our in-house florists, and our creative flower boxes where the bouquets can be arranged according to your own ideas at home. 
+                We redesign our bouquets every season.
+            </p>
+        </div>
+
+        <div id="contact-page">
+            <h2 id="contact-page-title">Contact</h2>
+            
+        <div id="contact">
+            <div id="email">
+                <h3>E-mail us at</h3>
+                <p>giardino@email.com</p>
+            </div>
+
+            <div id="phone">
+                <h3>Or phone us on</h3>
+                <p>+995 123 456 789</p>
+            </div>
+
+            <div id="social-media">
+                <h3>Follow us on social media</h3>
+                <div id="sm-logos">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img class="sm-logo" src="./images/facebook-logo.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="sm-logo" src="./images/instagram-logo.png" alt="">
+                    </a>
+                    <a href="https://twitter.com/" target="_blank">
+                        <img class="sm-logo" src="./images/twitter-logo1.png" alt="">
+                    </a>
+                </div>    
+            </div>
+        </div>
+
+        </div>
+
+        <div id="flowers-page"></div>
+
+        <div id="flowers">
+            <div id="flowers-header">
+                <button id="arrow-icon">
+                    <img src="./images/arrow-icon.png" alt="" onclick="showFlowers()">
+                </button>
+                <h3 id="flowers-title"></h3>
+            </div>
+            <div id="product-container"></div>
+            <button id="checkout-btn" onclick="showCheckout()">Checkout</button>
+        </div>
+    <div id="checkout-page">
+        <div id="checkout">
+            <div id="checkout-header">
+                <h2>Shopping bag</h2>
+                <img src="./images/close-icon.png" alt="" onclick="hideCheckout()">
+            </div>
+            <div id="checkout-content">
+            </div>
+            <div id="checkout-total">
+                <h3>Total:</h3>
+                <h3 id="total"></h3>
+            </div>
+            <div id="button-div">
+                <button id="clear-bag-btn" onclick="clearBag()">Clear bag <img src="./images/delete-icon.png" alt=""></button>
+                <button id="bag-checkout-btn" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>    
+</main>
+
+    <footer></footer>
+
+    <script type="module" src="./index.js"></script>
+    
+</body>
+</html>
